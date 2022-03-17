@@ -1,0 +1,11 @@
+python -V : 파이썬 버전확인
+
+python : 파이썬에 들어감
+
+help(object) : 헬프기능 수행
+
+print('hello world') : 함수
+
+exit() : 나감
+
+code . : 코드설정
