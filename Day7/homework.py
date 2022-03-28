@@ -149,3 +149,89 @@ lst = [10,1,5,2]
 단계2 : lst의 첫번째 원소에 2를 곱하여 result변수에 추가 및 출력하기
 단계3 : result의 홀수 번째 원소만 result2변수에 추가 및 출력하기
 '''
+lst = [10,1,5,2]
+print("문제1-1단계")
+result = lst*2
+print("1단계 : lst원소를 2배 생성하여 result변수에 저장 및 출력하기\n",result)
+print("문제1-2단계")
+last_num = 2*lst[0]
+result.append(last_num)
+print("2단계 : lst의 첫번째 원소에 2를 곱하여 result변수에 추가 및 출력하기\n",result)
+print("문제1-3단계")
+result2 = result[1:2]
+print("3단계 : result의 홀수 번째 원소만 result2변수에 추가 및 출력하기\n",result2)
+
+'''
+문제2] list원소 추가 및 요소 검사하기
+A형 list의 크기를 키보드로 입력받은 후, 
+입력받은 크기만큼 임의 숫자를 list에 추가하고, list의 크기를 출력하세요
+<출력예시>
+vector 수 : 3
+4
+2
+5
+vector의 크기 : 3
+
+B형 list크기를 키보드로 입력받은 후, 
+입력받은 크기만큼 임의 숫자를 list에 추가한다. 이후 list에서 찾을 값을 키보드로 입력한 후
+해당값이 list에 있으면 yes 없으면 no를 출력하세요
+<출력예시>
+vector 수 : 5
+1
+2
+3
+4
+5
+3
+YES
+'''
+print("문제2-A형")
+size = int(input("vector 수 : "))
+lst = []
+for i in range(size):
+    lst.append(int(input()))
+print("vector의 크기 : ", len(lst))
+
+print("문제2-B형")
+if int(input()) in lst:
+    print("YES")
+else:
+    print("NO")
+    
+'''
+문제3 list내포를 이용하여 문자열 처리하기
+A형 message변수를 대상으로 'spam'원소는 1, 'ham'원소는 0으로 dummy변수를 생성하세요
+<조건> list + for형식 적용
+(출력예시)
+[1,0,1,0,1]
+
+B형 message변수를 대상으로 'spam'원소만 추출하여 spam_list에 추가하세요
+<조건> list + for + if 형식 적용
+(출력예시)
+['spam','spam','spam']
+message = ['spam','ham','spam','ham','spam']
+'''
+message = ['spam','ham','spam','ham','spam']
+print("문제3-A형")
+dummy = [1 if i == 'spam' else 0 for i in message]
+print(dummy)
+print("문제3-B형")
+spam_list = [i for i in message if i=='spam']
+print(spam_list)
+
+'''
+문제4]
+position 변수를 대상으로 중복되지 않은 직위와 직위별 빈도수를 출력하세요
+(출력예시)
+중복되지 않은 직위 : ['사장','과장','대리','부장']
+각 직위별 빈도수 : ['과장':2,'부장':1,'대리':2,'사장':1]
+position = ['과장','부장','대리','사장','대리','과장']
+'''
+position = ['과장','부장','대리','사장','대리','과장']
+print("문제4")
+nonRepeat = list(set(position))
+print("중복되지 않은 직위 : ",nonRepeat)
+count_pos = {}
+for i in position:
+    count_pos[i] = count_pos.get(i,0)+1
+print("각 직위별 빈도수 : ",count_pos)
