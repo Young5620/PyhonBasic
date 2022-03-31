@@ -1,0 +1,22 @@
+파이썬 주피터 설치
+cmd 명령어
+
+1. pip
+파이썬 인스톨 package
+
+2. pip install jupyterlab
+
+3. jupyter
+확인
+
+4. 환경변수 path설정
+
+5. jupyter notebook
+
+
+jupyter notebook --generate-config
+
+.jupyter -> jupyter_notebook_config실행
+directory 설정
+c.notebookApp.ip -> 주석풀고 *
+c.notebookApp.allow -> 주석풀고 *
